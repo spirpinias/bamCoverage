@@ -1,5 +1,5 @@
-# hash:sha256:658cd6fe00a6eb8c96ea58e07e825019ec643e9a58139f786d9a465f92a25c2a
-FROM registry.apps.codeocean.com/codeocean/ubuntu:18.04
+# hash:sha256:2f1b49439feac59f3ace29982181d09257c34b42cc296aa59d1a0ebd9371539e
+FROM registry.apps.codeocean.com/codeocean/ubuntu:20.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 
