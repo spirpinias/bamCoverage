@@ -4,8 +4,12 @@ set -ex
 CONDA_DIR=/opt/conda
 
 #install mamba
-wget --no-hsts --quiet https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh -O /tmp/miniforge.sh 
-/tmp/miniforge.sh -b -p ${CONDA_DIR}
+wget --no-hsts --quiet https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh -O /tmp/miniforge.sh
+
+chmod 755 /tmp/miniforge.sh
+
+./tmp/miniforge.sh -b -p ${CONDA_DIR}
+
 rm /tmp/miniforge.sh
 
 find ${CONDA_DIR} -follow -type f -name '*.a' -delete 
