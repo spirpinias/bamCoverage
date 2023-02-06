@@ -21,7 +21,7 @@ In your results folder you will find the bigWig file with normalizations applied
 - Bin Size.
 - Any Chromosomes you wish to ignore during normalization. Default is chrX.
 - Choose a Normalization Technique from the list of choices.
-- Choose the version of your genome that the alignment file was generated from.
+- Choose the version of genome your alignment file was generated from.
 
 ## Source
 
