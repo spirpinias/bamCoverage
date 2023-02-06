@@ -5,20 +5,23 @@ This tool takes an alignment of reads or fragments as input (BAM file) and gener
 
 ## Features
 
-- Searches your environment for the alignment file in .bam format.
-- Customize Bin Size
-- Ignore chromosomes during normalization.
-- Choice of normalization procedure, if any.
-- Choose genome version.
-
-## Installation
-
-The latest version of deepTools has been downloaded via Mamba. Please see the postInstall script for further instruction. You do not have to install anything else. 
+- Searches your ../data for the alignment file in .bam format. 
 
 ## Usage
 
 This capsule requires alignment files that are position sorted and indexed bam format. If you supply alignment files, the capsule will return normalized according to the features available.
 
+## Output
+
+In your results folder you will find the bigWig file with normalizations applied.
+
+## Parameters
+
+- Number of Threads, if not utilized will automatically use all available.
+- Bin Size.
+- Any Chromosomes you wish to ignore during normalization. Default is chrX.
+- Choose a Normalization Technique from the list of choices.
+- Choose the version of your genome that the alignment file was generated from.
 
 ## Source
 
