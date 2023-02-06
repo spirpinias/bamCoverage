@@ -18,7 +18,7 @@ cores=$(get_cpu_count.py)
 # DeepTools 
 
 if [ -z "${1}" ]; then
-  num_threads=$((cores * 2))
+  num_threads=$cores
 else
   num_threads="${1}"
 fi
