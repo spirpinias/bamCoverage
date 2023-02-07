@@ -5,7 +5,7 @@ This tool takes an alignment of reads or fragments as input (BAM file) and gener
 
 ## Features
 
-- Searches your ../data for the alignment file in .bam format. 
+- Searches your **data** folder for the alignment file in .bam format. 
 
 ## Usage
 
