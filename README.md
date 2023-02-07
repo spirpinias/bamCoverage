@@ -5,11 +5,11 @@ This tool takes an alignment of reads or fragments as input (BAM file) and gener
 
 ## Features
 
-- Searches your **data** folder for the alignment file in .bam format. 
+- Searches your **data** folder for the alignment file in .bam and .bam.bai format. 
 
 ## Usage
 
-This capsule requires alignment files that are position sorted and indexed bam format. If you supply alignment files, the capsule will return normalized according to the features available.
+This capsule requires alignment files that are position sorted and indexed bam format. When you supply alignment files, the capsule will return normalized according to the features on App Panel selected.
 
 ## Output
 
