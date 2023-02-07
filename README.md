@@ -11,17 +11,37 @@ This tool takes an alignment of reads or fragments as input (BAM file) and gener
 
 This capsule requires alignment files that are position sorted and indexed bam format. When you supply alignment files, the capsule will return normalized according to the features on App Panel selected.
 
+In the case of one. 
  - bamFiles
    - SampleA.bam
    - SampleA.bam.bai
+
+In the case of many.
+ - bamFiles
+   - SampleA.bam
+   - SampleA.bam.bai
+   - SampleB.bam
+   - SampleB.bam.bai
+   - SampleC.bam
+   - SampleC.bam.bai
 
 ## Output
 
 In your results folder you will find the bigWig file with normalizations applied.
 
+In the case of one.
+
    - Results 
       - SampleA.bw
 
+In the case of many.
+
+   - Results 
+      - SampleA.bw
+      - SampleB.bw
+      - SampleC.bw
+
+      
 ## Parameters
 
 - Number of Threads, if not utilized will automatically use all available.
