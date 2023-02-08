@@ -5,13 +5,13 @@ set -ex
 source ./config.sh
 source ./utils.sh
 
-bam_count=$(find -L ../data -name "*.bam" | wc -l)
-bamfile=$(find -L ../data -name "*.bam")
+bamfiles=$(find -L ../data -name "*.bam")
+bam_count=$(echo $bamfile | wc -w)
 
 if [ "$bam_count" -gt 0 ];
 then
     echo "Using $num_threads Available Threads"
-    for bam in ${bamfile}; 
+    for bam in ${bamfiles}; 
     do  
         filename=$(basename -a $bam)
         prefix=$(get_read_prefix.py "$filename" "0")
