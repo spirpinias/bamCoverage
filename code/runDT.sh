@@ -6,7 +6,7 @@ source ./config.sh
 source ./utils.sh
 
 bamfiles=$(find -L ../data -name "*.bam")
-bam_count=$(echo $bamfile | wc -w)
+bam_count=$(echo $bamfiles | wc -w)
 
 if [ "$bam_count" -gt 0 ];
 then
