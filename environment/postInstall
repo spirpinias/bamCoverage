@@ -1,35 +1,8 @@
 #!/usr/bin/env bash
 set -ex
 
-CONDA_DIR=/opt/conda
-
-#install mamba
-wget --no-hsts --quiet https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh -O /tmp/miniforge.sh
-
-chmod 755 /tmp/miniforge.sh
-
-./tmp/miniforge.sh -b -p ${CONDA_DIR}
-
-rm /tmp/miniforge.sh
-
-find ${CONDA_DIR} -follow -type f -name '*.a' -delete 
-find ${CONDA_DIR} -follow -type f -name '*.pyc' -delete
-
-. ${CONDA_DIR}/etc/profile.d/conda.sh
-. ${CONDA_DIR}/etc/profile.d/mamba.sh
-
-echo ". ${CONDA_DIR}/etc/profile.d/conda.sh && conda activate base" >> /etc/skel/.bashrc
-echo ". ${CONDA_DIR}/etc/profile.d/conda.sh && conda activate base" >> ~/.bashrc
-echo ". ${CONDA_DIR}/etc/profile.d/mamba.sh && conda activate base" >> /etc/skel/.bashrc
-echo ". ${CONDA_DIR}/etc/profile.d/mamba.sh && conda activate base" >> ~/.bashrc
-
-conda clean --tarballs --index-cache --packages --yes
-conda clean --force-pkgs-dirs --all --yes
-
-mamba install -c bioconda deeptools 
-
 git clone https://github.com/zappuf/aux_tools.git
 cd aux_tools/
-git checkout 6c40bb90aae58a725870601626efae5e542764ef
+git checkout 3aea891c0a4a4eb17d1767b32c542b4cbed3f480
 chmod +x get_*
 ln -s $PWD/get_*.py /usr/local/bin
