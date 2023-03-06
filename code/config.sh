@@ -14,11 +14,10 @@ else
   echo ""
 fi
 
-cores=$(get_cpu_count.py)
 # DeepTools 
 
 if [ -z "${1}" ]; then
-  num_threads=$cores
+  num_threads=$(get_cpu_count.py)
 else
   num_threads="${1}"
 fi
