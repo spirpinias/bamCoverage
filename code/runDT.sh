@@ -17,9 +17,9 @@ then
         # deepTools BamCoverage \
         bamCoverage \
         --numberOfProcessors "$num_threads" \
+        --effectiveGenomeSize ${genome_version} \
         ${bin_size} \
         ${norm_tech} \
-        --effectiveGenomeSize ${genome_version} \
         ${ignore_chrom} \
         -b $bam \
         -o ../results/${prefix}.bw 
