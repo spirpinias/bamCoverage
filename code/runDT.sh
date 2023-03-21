@@ -19,7 +19,8 @@ then
     
         # deepTools BamCoverage \
         bamCoverage \
-        -b $bam -o ../results/${prefix}.bw \
+        -b $bam \
+        -o ../results/${prefix}.bw \
         --binSize "$bin_size" \
         --normalizeUsing "$norm_tech" \
         --effectiveGenomeSize "$genome_version" \
