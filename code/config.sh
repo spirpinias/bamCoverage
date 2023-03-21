@@ -14,6 +14,11 @@ else
   echo ""
 fi
 
+
+bamfiles=$(find -L ../data -name "*.bam")
+bam_count=$(echo $bamfiles | wc -w)
+
+
 # DeepTools 
 
 if [ -z "${1}" ]; then
@@ -21,7 +26,6 @@ if [ -z "${1}" ]; then
 else
   num_threads="${1}"
 fi
-
 
 if [ -z $2 ]; then
     bin_size=""
