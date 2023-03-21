@@ -45,7 +45,7 @@ else
 fi
 
 if [ -z $5 ]; then
-    genome_version=""
+    genome_version="GRCh37"
 else
-    genome_version="--effectiveGenomeSize $5"
+    genome_version="$5"
 fi

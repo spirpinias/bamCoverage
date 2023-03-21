@@ -19,7 +19,7 @@ then
         --numberOfProcessors "$num_threads" \
         ${bin_size} \
         ${norm_tech} \
-        ${genome_version} \
+        --effectiveGenomeSize ${genome_version} \
         ${ignore_chrom} \
         -b $bam \
         -o ../results/${prefix}.bw 
