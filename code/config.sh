@@ -22,26 +22,27 @@ else
   num_threads="${1}"
 fi
 
+
 if [ -z $2 ]; then
-    bin_size="50"
+    bin_size=""
 else
-    bin_size="$2"
+    bin_size="--binSize $2"
 fi
 
 if [ -z $3 ]; then
-    ignore_chrom="chrX"
+    ignore_chrom=""
 else
-    ignore_chrom="$3"
+    ignore_chrom="--ignoreForNormalization $3"
 fi
 
 if [ -z $4 ]; then
-    norm_tech="RPKM"
+    norm_tech=""
 else
-    norm_tech="$4"
+    norm_tech="--normalizeUsing $4"
 fi
 
 if [ -z $5 ]; then
-    genome_version="GRCh37"
+    genome_version=""
 else
-    genome_version="$5"
+    genome_version="--effectiveGenomeSize $5"
 fi

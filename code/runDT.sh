@@ -19,13 +19,13 @@ then
     
         # deepTools BamCoverage \
         bamCoverage \
+        --numberOfProcessors "$num_threads" \
+        ${bin_size} \
+        ${norm_tech} \
+        ${genome_version} \
+        ${ignore_chrom} \
         -b $bam \
-        -o ../results/${prefix}.bw \
-        --binSize "$bin_size" \
-        --normalizeUsing "$norm_tech" \
-        --effectiveGenomeSize "$genome_version" \
-        --ignoreForNormalization "$ignore_chrom" \
-        --numberOfProcessors "$num_threads" 
+        -o ../results/${prefix}.bw 
     done
 else
     echo "No bam files were found."
