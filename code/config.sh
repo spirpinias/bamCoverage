@@ -61,10 +61,10 @@ else
     offset="--Offset $7"
 fi
 
-if [ $8 == "forward" ]; then
+if [ $8 = "forward" ]; then
     filter_RNA_strand="--filterRNAstrand forward"
 
-elif [ $8 == "reverse" ]; then
+elif [ $8 = "reverse" ]; then
     filter_RNA_strand="--filterRNAstrand reverse"
 else
     filter_RNA_strand=""
