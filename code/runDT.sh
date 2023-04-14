@@ -29,11 +29,11 @@ then
         ${center_reads} \
         ${sam_field_include} \
         ${sam_field_exclude} \
-        --numberOfProcessors "$num_threads" \
-        --effectiveGenomeSize ${genome_version} \
         ${bin_size} \
         ${norm_tech} \
         ${ignore_chrom} \
+        --numberOfProcessors "$num_threads" \
+        --effectiveGenomeSize ${genome_version} \
         -b $bam \
         -o ../results/${prefix}.bw 
     done
