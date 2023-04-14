@@ -25,107 +25,107 @@ else
   num_threads="${1}"
 fi
 
-if [ -z $2 ]; then
+if [ -z "${2}" ]; then
     bin_size=""
 else
-    bin_size="--binSize $2"
+    bin_size="--binSize ${2}"
 fi
 
-if [ -z $3 ]; then
+if [ -z "${3}" ]; then
     ignore_chrom=""
 else
-    ignore_chrom="--ignoreForNormalization $3"
+    ignore_chrom="--ignoreForNormalization ${3}"
 fi
 
-if [ -z $4 ]; then
+if [ -z "${4}" ]; then
     norm_tech=""
 else
-    norm_tech="--normalizeUsing $4"
+    norm_tech="--normalizeUsing ${4}"
 fi
 
-if [ -z $5 ]; then
+if [ -z "${5}" ]; then
     genome_version="GRCh37"
 else
-    genome_version="$5"
+    genome_version="${5}"
 fi
 
-if [ $6 = "True" ]; then
+if [ "${6}" = "True" ]; then
     mnase="--MNase"
 else
     mnase=""
 fi
 
-if [ -z $7 ]; then
+if [ -z "${7}" ]; then
     offset=""
 else
-    offset="--Offset $7"
+    offset="--Offset ${7}"
 fi
 
-if [ $8 = "forward" ]; then
+if [ "${8}" = "forward" ]; then
     filter_RNA_strand="--filterRNAstrand forward"
 
-elif [ $8 = "reverse" ]; then
+elif [ "${8}" = "reverse" ]; then
     filter_RNA_strand="--filterRNAstrand reverse"
 else
     filter_RNA_strand=""
 fi
 
-if [ -z $9 ]; then
+if [ -z "${9}" ]; then
     region=""
 else
-    region="--region $9"
+    region="--region ${9}"
 fi
 
-if [ -z $10 ]; then
+if [ -z "${10}" ]; then
     black_list=""
 else
-    black_list="--blackListFileName $10"
+    black_list="--blackListFileName ${10}"
 fi
 
-if [ $11 = "True" ]; then
+if [ "${11}" = "True" ]; then
     exact_scaling="--exactScaling"
 else
     exact_scaling=""
 fi
 
-if [ $12 = "True" ]; then
+if [ "${12}" = "True" ]; then
     skip_non_cover="--skipNonCoveredRegions"
 else
     skip_non_cover=""
 fi
 
-if [ -z $13 ]; then
+if [ -z "${13}" ]; then
     smooth_len=""
 else
-    smooth_len="--smoothLength $13"
+    smooth_len="--smoothLength ${13}"
 fi
 
-if [ -z $14 ]; then
+if [ -z "${14}" ]; then
     extend_reads=""
 else
-    extend_reads="--extendReads $14"
+    extend_reads="--extendReads ${14}"
 fi
 
-if [ $15 = "True" ]; then
+if [ "${15}" = "True" ]; then
     ignore_dups="--ignoreDuplicates"
 else
     ignore_dups=""
 fi
  
-if [ $16 = "True" ]; then
+if [ "${16}" = "True" ]; then
     center_reads="--centerReads"
 else
     center_reads=""
 fi
 
-if [ -z $17 ]; then
+if [ -z "${17}" ]; then
     sam_field_include=""
 else
-    sam_field_include="--samFlagInclude $17"
+    sam_field_include="--samFlagInclude ${17}"
 fi
 
-if [ -z $18 ]; then
+if [ -z "${18}" ]; then
     sam_field_exclude=""
 else
-    sam_field_exclude="--samFlagExclude $18"
+    sam_field_exclude="--samFlagExclude ${18}"
 fi
