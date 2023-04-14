@@ -8,8 +8,7 @@ source ./utils.sh
 if [ "$bam_count" -gt 0 ];
 then
     echo "Using $num_threads Available Threads"
-    for bam in ${bamfiles}; 
-    do  
+    for bam in ${bamfiles}; do  
         filename=$(basename -a $bam)
         prefix=$(get_read_prefix.py "$filename" "0")
         echo "PREFIX: $prefix"
