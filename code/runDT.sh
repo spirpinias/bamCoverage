@@ -20,6 +20,7 @@ then
         ${offset} \
         ${filter_RNA_strand} \
         ${region} \
+        ${black_list} \
         --numberOfProcessors "$num_threads" \
         --effectiveGenomeSize ${genome_version} \
         ${bin_size} \
