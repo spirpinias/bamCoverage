@@ -49,7 +49,7 @@ else
     genome_version="$5"
 fi
 
-if [ $6 == "True" ]; then
+if [ $6 = "True" ]; then
     mnase="--MNase"
 else
     mnase=""
