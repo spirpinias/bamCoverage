@@ -7,6 +7,7 @@ source ./utils.sh
 
 if [ "$bam_count" -gt 0 ];
 then
+
     echo "Using $num_threads Available Threads"
     for bam in ${bamfiles}; do  
         filename=$(basename -a $bam)
