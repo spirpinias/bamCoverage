@@ -62,11 +62,23 @@ else
     offset="--Offset $7"
 fi
 
-if [ $7 == "forward" ]; then
+if [ $8 == "forward" ]; then
     filter_RNA_strand="--filterRNAstrand forward"
 
-elif [ $7 == "reverse" ]; then
+elif [ $8 == "reverse" ]; then
     filter_RNA_strand="--filterRNAstrand reverse"
 else
     filter_RNA_strand=""
+fi
+
+if [ -z $9 ]; then
+    region=""
+else
+    region="--region $9"
+fi
+
+if [ -z $10 ]; then
+    black_list=""
+else
+    black_list="--blackListFileName $10"
 fi
