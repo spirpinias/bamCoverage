@@ -49,3 +49,24 @@ if [ -z $5 ]; then
 else
     genome_version="$5"
 fi
+
+if [ $6 == "True" ]; then
+    mnase="--MNase"
+else
+    mnase="$6"
+fi
+
+if [ -z $7 ]; then
+    offset=""
+else
+    offset="--Offset $7"
+fi
+
+if [ $7 == "forward" ]; then
+    filter_RNA_strand="--filterRNAstrand forward"
+
+elif [ $7 == "reverse" ]; then
+    filter_RNA_strand="--filterRNAstrand reverse"
+else
+    filter_RNA_strand=""
+fi

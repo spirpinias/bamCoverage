@@ -16,6 +16,9 @@ then
     
         # deepTools BamCoverage \
         bamCoverage \
+        ${mnase} \
+        ${offset} \
+        ${filter_RNA_strand} \
         --numberOfProcessors "$num_threads" \
         --effectiveGenomeSize ${genome_version} \
         ${bin_size} \
