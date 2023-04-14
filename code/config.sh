@@ -53,7 +53,7 @@ fi
 if [ $6 == "True" ]; then
     mnase="--MNase"
 else
-    mnase="$6"
+    mnase=""
 fi
 
 if [ -z $7 ]; then
