@@ -82,3 +82,51 @@ if [ -z $10 ]; then
 else
     black_list="--blackListFileName $10"
 fi
+
+if [ $11 == "True" ]; then
+    exact_scaling="--exactScaling"
+else
+    exact_scaling=""
+fi
+
+if [ $12 == "True" ]; then
+    skip_non_cover="--skipNonCoveredRegions"
+else
+    skip_non_cover=""
+fi
+
+if [ -z $13 ]; then
+    smooth_len=""
+else
+    smooth_len="--smoothLength $13"
+fi
+
+if [ -z $14 ]; then
+    extend_reads=""
+else
+    extend_reads="--extendReads $14"
+fi
+
+if [ $15 == "True" ]; then
+    ignore_dups="--ignoreDuplicates"
+else
+    ignore_dups=""
+fi
+ 
+if [ $16 == "True" ]; then
+    center_reads="--centerReads"
+else
+    center_reads=""
+fi
+
+if [ -z $17 ]; then
+    sam_field_include=""
+else
+    sam_field_include="--samFlagInclude $17"
+fi
+
+if [ -z $18 ]; then
+    sam_field_exclude=""
+else
+    sam_field_exclude="--samFlagExclude $18"
+fi

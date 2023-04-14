@@ -21,6 +21,15 @@ then
         ${filter_RNA_strand} \
         ${region} \
         ${black_list} \
+        ${exact_scaling} \
+        ${skip_non_cover} \
+        ${smooth_len} \
+        ${extend_reads} \
+        ${ignore_dups} \
+        ${center_reads} \
+        ${sam_field_include} \
+        ${sam_field_exclude} \
+
         --numberOfProcessors "$num_threads" \
         --effectiveGenomeSize ${genome_version} \
         ${bin_size} \
