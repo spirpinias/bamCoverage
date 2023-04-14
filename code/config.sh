@@ -18,7 +18,6 @@ fi
 bamfiles=$(find -L ../data -name "*.bam")
 bam_count=$(echo $bamfiles | wc -w)
 
-
 # DeepTools 
 if [ -z "${1}" ]; then
   num_threads=$(get_cpu_count.py)
