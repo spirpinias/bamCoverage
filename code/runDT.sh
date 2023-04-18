@@ -13,6 +13,7 @@ then
     echo "Number of Black List Files : $black_list_count"
 
     for bam in ${bamfiles}; do  
+    
         filename=$(basename -a $bam)
         prefix=$(get_read_prefix.py "$filename" "0")
         echo "PREFIX: $prefix"
