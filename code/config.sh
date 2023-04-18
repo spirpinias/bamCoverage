@@ -78,7 +78,9 @@ fi
 
 if [ -z "${10}" ]; then
     black_list=""
+    black_list_count=0
 else
+    black_list_count=1
     black_list="--blackListFileName ${10}"
 fi
 

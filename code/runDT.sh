@@ -8,7 +8,10 @@ source ./utils.sh
 if [ "$bam_count" -gt 0 ];
 then
 
-    echo "Using $num_threads Available Threads"
+    echo "Number of Threads : $num_threads"
+    echo "Number of Bam Files : $bam_count" 
+    echo "Number of Black List Files : $black_list_count"
+
     for bam in ${bamfiles}; do  
         filename=$(basename -a $bam)
         prefix=$(get_read_prefix.py "$filename" "0")
