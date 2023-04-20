@@ -82,7 +82,7 @@ if [ -z "${10}" ]; then
 else
     black_list_count=1
     black_list_file=$(find -L ../data -name "${10}.bed")
-    black_list="--blackListFileName ${10}"
+    black_list="--blackListFileName ${black_list_file}"
 fi
 
 if [ "${11}" = "True" ]; then
