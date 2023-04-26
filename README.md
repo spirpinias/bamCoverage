@@ -28,6 +28,9 @@ In the case of many.
    - SampleC.bam
    - SampleC.bam.bai
 
+Blacklist (if any)
+   - blacklist.bed
+
 ## Output
 
 In your results folder you will find the bigWig file with normalizations applied.
@@ -52,6 +55,20 @@ In the case of many.
 - Any Chromosomes you wish to ignore during normalization. Default is chrX.
 - Choose a Normalization Technique from the list of choices.
 - Choose the version of genome your alignment file was generated from.
+- Determinate nucleosome position (if MNase-Seq) 
+- Usage of Offset
+- Emphasis on reads on the Forward or Reverse Strand.
+- Region of the Genome to focus.
+- Blacklisted Regions (if any)
+- Exact scaling
+- Skip Non Covered Regions
+- Smooth length
+- Extend Reads
+- Ignore Duplicate Reads
+- Center Reads
+- Sam Field Include Flag
+- Sam Field Exclude Flag
+
 
 ## Source
 
