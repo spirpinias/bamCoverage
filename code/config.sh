@@ -15,7 +15,7 @@ else
 fi
 
 # Extracting Alignment Files.
-bamfiles=$(find -L /data/Chip-METTL4-N6-N6mA-Rep1-6-Bam-Slim -name "*.bam")
+bamfiles=$(find -L ../data/Chip-METTL4-N6-N6mA-Rep1-6-Bam-Slim -name "*.bam")
 bam_count=$(echo $bamfiles | wc -w)
 
 # DeepTools 
