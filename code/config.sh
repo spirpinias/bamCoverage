@@ -15,7 +15,7 @@ else
 fi
 
 # Extracting Alignment Files.
-bamfiles=$(find -L ../data -name "*.bam")
+bamfiles=$(find -L ../data/BamFiles -name "*.bam")
 bam_count=$(echo $bamfiles | wc -w)
 
 # DeepTools 
