@@ -19,9 +19,9 @@ bamfiles=$(find -L ../data/Alignment -name "*.bam")
 bam_count=$(echo $bamfiles | wc -w)
 
 # DeepTools 
-#$(get_cpu_count.py)
+
 if [ -z "${1}" ]; then
-  num_threads=$(cat /proc/cpuinfo | grep processor | wc -l)
+  num_threads=$(get_cpu_count.py)
 else
   num_threads="${1}"
 fi
