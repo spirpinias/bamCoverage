@@ -14,8 +14,7 @@ then
 
     for bam in ${bamfiles}; do  
     
-        filename=$(basename -a $bam)
-        prefix=$(get_read_prefix.py "$filename" "0")
+        prefix=$(basename -s .bam $bam)
         echo "PREFIX: $prefix"
     
         # deepTools BamCoverage \
