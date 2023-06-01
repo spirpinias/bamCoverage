@@ -77,13 +77,18 @@ else
     region="--region ${9}"
 fi
 
-if [ -z "${10}" ]; then
-    black_list=""
+if [ "${10}" == "True" ]; then
     black_list_count=0
 else
-    black_list_count=1
-    black_list_file=$(find -L ../data -name "${10}.bed")
-    black_list="--blackListFileName ${black_list_file}"
+    # Extract Blacklist Files.
+    black_list_file=$(find -L ../data/Blacklist -name "*.bed")
+    black_list_count=$(echo ${black_list_file} | wc -w)
+    if [ "$black_list_count" -eq 1 ];
+    then
+      black_list="--blackListFileName ${black_list_file}"
+    else
+      echo "Only 1 blacklist (.bed) is permitted."
+    fi
 fi
 
 if [ "${11}" = "True" ]; then
