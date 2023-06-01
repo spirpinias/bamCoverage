@@ -8,7 +8,7 @@ source ./utils.sh
 if [ "$bam_count" -gt 0 ];
 then
 
-    echo "Number of Threads : $num_threads"
+    echo "Number of Processors : $num_threads"
     echo "Number of Bam Files : $bam_count" 
     echo "Number of Black List Files : $black_list_count"
 
